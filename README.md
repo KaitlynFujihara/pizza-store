@@ -10,8 +10,11 @@ _Pizza order system_
 _If specialty pizza options are submitted, it does not calculate for a custom pizza_
   _specialty pizza options are selected with dropdowns_
 _custom pizza options use size and # of toppings to calculate cost_
-    _sizes: small, medium, large_
+    _sizes: small ($10), medium ($12), large($14)_
     _veggie toppings: $2, meat toppings: $3_
+    _define how many checkboxes are checked and put into array_
+    _use array.length to calculate how many toppings were selected for veggies and meats_
+    _add both of totals for veggies and meats and size to get the total cost of custom pizza_
 
 ## Setup/Installation Requirements
 

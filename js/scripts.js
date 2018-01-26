@@ -28,7 +28,9 @@ Custom.prototype.meatFunction = function(inputtedMeats){
   return inputtedMeats.length *= 3
 };
 
-
+Custom.prototype.totalCost = function(){
+  return this.meatFunction(inputtedMeats) + this.veggieFunction(inputtedVeggies) + this.sizeFunction(inputtedSize);
+}
 
 //user-interface logic
 $(document).ready(function(){
@@ -53,6 +55,6 @@ $(document).ready(function(){
         var inputtedSize = $("select#size").val();
         var newOrder = new Custom (inputtedSize, inputtedVeggies, inputtedMeats);
 
-        $("#total").html(newOrder.sizeFunction() + newOrder.meatFunction(inputtedMeats)+newOrder.veggieFunction(inputtedVeggies));
+        $("#total").html(newOrder.totalCost());
     });
   });
