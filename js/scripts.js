@@ -8,48 +8,51 @@ function Custom (size, veggies, meats) {
 }
 
 //when size is selected return a certain value that relates to price
-Custom.prototype.size = function(){
-  if(size==="small"){
+Custom.prototype.sizeFunction = function(inputtedSize){
+  if(this.size==="small"){
     return 10
-  } else if (size==="medium"){
+  } else if (this.size==="medium"){
     return 12
   } else {
     return 14
   }
-}
+};
 
-//add up cost of toppings in array
-Custom.prototype.veggies = function(){
-  var veggies= veggiesChecked
-  for(var i = 0; i<=veggies.length; i++)
+//add up cost of toppings in veggie array
+Custom.prototype.veggieFunction = function(inputtedVeggies){
+  return inputtedVeggies.length *= 2
+};
 
-}
+//add up cost of toppings in meat array
+Custom.prototype.meatFunction = function(inputtedMeats){
+  return inputtedMeats.length *= 3
+};
+
+
 
 //user-interface logic
 $(document).ready(function(){
-  $("input").each(function() {
-    var veggiesChecked = [];
-    var meatsChecked = []
+  var inputtedVeggies = [];
+  var inputtedMeats = [];
+
     $("input[class='veggie']").change(function(){
       var checked = $(this).val();
       if ($(this).is(':checked')){
-        veggiesChecked.push(checked);
+        inputtedVeggies.push(checked);
       }
     });
     $("input[class='meat']").change(function(){
       var checked = $(this).val();
       if ($(this).is(':checked')){
-        meatsChecked.push(checked);
+        inputtedMeats.push(checked);
         }
       });
-  $("#orderForm").submit(function(event){
-    event.preventDefault();
-    console.log(veggiesChecked)
-    console.log(meatsChecked)
-    var inputtedSize =$("select#size").val();
-    var inputtedVeggies =$("select.veggie").val();
-    var inputtedMeats =$("select.meat").val();
-    var newOrder = new Custom (inputtedSize, inputtedVeggies, inputtedMeats)
+
+      $("#orderForm").submit(function(event){
+        event.preventDefault();
+        var inputtedSize = $("select#size").val();
+        var newOrder = new Custom (inputtedSize, inputtedVeggies, inputtedMeats);
+
+        $("#total").html(newOrder.sizeFunction() + newOrder.meatFunction(inputtedMeats)+newOrder.veggieFunction(inputtedVeggies));
     });
   });
-});

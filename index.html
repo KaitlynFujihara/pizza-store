@@ -46,11 +46,11 @@
         <h2>Customize Your Pizza:</h2>
         <h3>Size</h3>
         <div class="dropdown">
-          <select class="btn btn-default dropdown-toggle" aria-labelledby="dropdownMenu1">
+          <select class="btn btn-default dropdown-toggle" aria-labelledby="dropdownMenu1" id="size">
             <option selected="true" disabled>Choose Your Size</option>
-            <option value="small">Small (10 inches)</option>
-            <option value="medium">Medium (12 inches)</option>
-            <option value="large">Large (14 inches)</option>
+            <option value="small">$10 Small (10 inches)</option>
+            <option value="medium">$12 Medium (12 inches)</option>
+            <option value="large">$14 Large (14 inches)</option>
           </select>
         </div>
         <h3>Toppings</h3>
@@ -90,7 +90,9 @@
           </div>
           <button type="submit" name="button" class="btn btn-danger" id="calculate">Calculate Order Total</button>
         </form>
-      <h2 id="total">Total Cost</h2>
+      <div id="total">
+        <h2>Total Cost</h2>
+      </div>
     </div>
   </body>
 </html>
