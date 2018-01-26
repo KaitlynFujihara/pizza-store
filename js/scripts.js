@@ -28,10 +28,6 @@ Custom.prototype.meatFunction = function(inputtedMeats){
   return inputtedMeats.length *= 3
 };
 
-Custom.prototype.totalCost = function(){
-  return this.meatFunction(inputtedMeats) + this.veggieFunction(inputtedVeggies) + this.sizeFunction(inputtedSize);
-}
-
 //user-interface logic
 $(document).ready(function(){
   var inputtedVeggies = [];
@@ -54,7 +50,22 @@ $(document).ready(function(){
         event.preventDefault();
         var inputtedSize = $("select#size").val();
         var newOrder = new Custom (inputtedSize, inputtedVeggies, inputtedMeats);
+        var total = newOrder.meatFunction(inputtedMeats)+newOrder.veggieFunction(inputtedVeggies)+ newOrder.sizeFunction(inputtedSize);
 
-        $("#total").html(newOrder.totalCost());
-    });
+        $("#total").show();
+        $("#result").append("Your pizza is $" + total +
+        "<br>Your "+ "<strong>" + inputtedSize + "</strong>" + " pizza will have: <br>" + inputtedVeggies.join(" ") + "<br>" + inputtedMeats.join(" "));
+        $('#calculate').attr("disabled", true);
+
+      });
+
+      $("#submit").click(function(){
+        alert("Your order has been placed! Thanks for checking out Mama Mia")
+        $("#orderForm")[0].reset();
+        $('#submit').attr("disabled", true);
+      });
+
+      $("#tryAgain").click(function(){
+        window.location.reload();
+      });
   });

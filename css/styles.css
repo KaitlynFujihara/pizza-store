@@ -5,7 +5,15 @@
   margin: 0 auto;
 }
 
+button {
+  margin-bottom: 10px;
+}
 
-/* #total {
+#total {
   display:none;
-} */
+}
+
+h1, h2, h3 {
+  font-family: 'Pacifico', cursive;
+
+}
