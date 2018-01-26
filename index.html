@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <title>Pizza Store</title>
+  </head>
+  <body>
+      <div class="container" id="specialtyMenu">
+        <h1>Mama Mia Pizzeria</h1>
+        <h2>Specialty Pizzas</h2>
+        <form id="orderForm">
+            <h3>Cheese: Mozzarella and tomato sauce</h3>
+            <div class="dropdown">
+              <select class="btn btn-default dropdown-toggle" aria-labelledby="dropdownMenu1">
+                <option selected="true" disabled>Choose Your Size</option>
+                <option>Small (10 inches)- $10</option>
+                <option>Medium (12 inches)- $13</option>
+                <option>Large (14 inches)- $17</option>
+              </select>
+            </div>
+            <h3>Katie's Favorite: Spinach and Italian Sausage</h3>
+            <div class="dropdown">
+              <select class="btn btn-default dropdown-toggle" aria-labelledby="dropdownMenu1">
+                <option selected="true" disabled>Choose Your Size</option>
+                <option>Small (10 inches)- $13</option>
+                <option>Medium (12 inches)- $16</option>
+                <option>Large (14 inches)- $20</option>
+              </select>
+            </div>
+            <h3>Supreme: Olives, Bell Peppers, Pepperoni, and Salami</h3>
+            <div class="dropdown">
+              <select class="btn btn-default dropdown-toggle" aria-labelledby="dropdownMenu1">
+                <option selected="true" disabled>Choose Your Size</option>
+                <option>Small (10 inches)- $16</option>
+                <option>Medium (12 inches)- $20</option>
+                <option>Large (14 inches)- $24</option>
+              </select>
+            </div>
+      </div>
+      <div class="container" id="customMenu">
+        <h2>Customize Your Pizza:</h2>
+        <h3>Size</h3>
+        <div class="dropdown">
+          <select class="btn btn-default dropdown-toggle" aria-labelledby="dropdownMenu1">
+            <option selected="true" disabled>Choose Your Size</option>
+            <option>Small (10 inches)</option>
+            <option>Medium (12 inches)</option>
+            <option>Large (14 inches)</option>
+          </select>
+        </div>
+        <h3>Toppings</h3>
+        <h4>Veggies: $2 per add topping</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="spinach" id="spinach">
+            <label class="form-check-label" for="defaultCheck1">Spinach</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="olives" id="olives">
+            <label class="form-check-label" for="defaultCheck1">Olives</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="tomatoes" id="tomatoes">
+            <label class="form-check-label" for="defaultCheck1">Tomatoes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="peppers" id="peppers">
+            <label class="form-check-label" for="defaultCheck1">Bell Peppers</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="mushrooms" id="mushrooms">
+            <label class="form-check-label" for="defaultCheck1">Mushrooms</label>
+          </div>
+        <h4>Meat: $3 per add topping</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="pepperoni" id="pepperoni">
+            <label class="form-check-label" for="defaultCheck1">Pepperoni</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="salami" id="salami">
+            <label class="form-check-label" for="defaultCheck1">Salami</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="sausage" id="sausage">
+            <label class="form-check-label" for="defaultCheck1">Italian Sausage</label>
+          </div>
+          <button type="submit" name="button" class="btn btn-danger">Calculate Order Total</button>
+        </form>
+      <h2 id="total">Total Cost</h2>
+    </div>
+  </body>
+</html>

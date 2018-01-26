@@ -1,0 +1,17 @@
+#specialtyMenu {
+  text-align: center;
+  list-style-type: none;
+  display: block;
+  margin: 0 auto;
+}
+
+#customMenu {
+  text-align: center;
+  list-style-type: none;
+  display: block;
+  margin: 0 auto;
+}
+
+#total {
+  display:none;
+}
