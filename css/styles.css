@@ -1,13 +1,12 @@
-.container {
-  text-align: center;
-  list-style-type: none;
+#customMenu{
   display: block;
   margin: 0 auto;
+  background-color:white;
+  height: 500px;
+  width:80%;
+  text-align:center;
 }
 
-button {
-  margin-bottom: 10px;
-}
 
 #total {
   display:none;
@@ -16,4 +15,35 @@ button {
 h1, h2, h3 {
   font-family: 'Pacifico', cursive;
 
+}
+
+li {
+  display:inline;
+  list-style-type: none;
+}
+
+.icon {
+  width:15px;
+}
+
+.pizza {
+  width:300px;
+}
+
+body {
+  background-image: url("../img/gingham.jpg");
+  background-repeat: repeat;
+  height: 100%;
+
+}
+
+.jumbotron {
+  background-color:white;
+  width:800px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  list-style-type: none;
+  text-align:center;
 }

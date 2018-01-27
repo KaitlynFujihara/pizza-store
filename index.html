@@ -12,10 +12,19 @@
   </head>
   <body>
       <div class="container">
-        <h1>Mama Mia Pizzeria</h1>
-        <form id="orderForm">
+        <div class="jumbotron">
+          <h1>Mama Mia Pizzeria</h1>
+          <ul>
+            <li>Address: 1234 Pizza Street <img src="img/icon.png" class="icon"></li>
+            <li>Phone: 123-456-7890 <img src="img/icon.png" class="icon"></li>
+            <li>Hours: Monday-Saturday 12PM-10PM</li>
+          </ul>
+          <img src="img/pizza.png" class="pizza">
+        </div>
       </div>
-      <div class="container" id="customMenu">
+      <form id="orderForm">
+      <div class="container">
+        <div id="customMenu">
         <div class="col-md-6">
           <h2>Customize Your Pizza:</h2>
           <h3>Size</h3>
@@ -74,5 +83,6 @@
         <button type="submit" name="button" class="btn btn-primary" id="tryAgain">Reorder</button>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>

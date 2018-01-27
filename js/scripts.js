@@ -60,7 +60,7 @@ $(document).ready(function(){
       });
 
       $("#submit").click(function(){
-        alert("Your order has been placed! Thanks for checking out Mama Mia")
+        alert("Your order has been placed! Thanks for checking out Mama Mia!")
         $("#orderForm")[0].reset();
         $('#submit').attr("disabled", true);
       });
