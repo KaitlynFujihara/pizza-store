@@ -7,13 +7,14 @@ function Custom (size, veggies, meats) {
   this.meats = [];
 }
 
+
 //when size is selected return a certain value that relates to price
 Custom.prototype.sizeFunction = function(inputtedSize){
   if(this.size==="small"){
     return 10
   } else if (this.size==="medium"){
     return 12
-  } else {
+  } else if (this.size==="large") {
     return 14
   }
 };
@@ -51,12 +52,15 @@ $(document).ready(function(){
         var inputtedSize = $("select#size").val();
         var newOrder = new Custom (inputtedSize, inputtedVeggies, inputtedMeats);
         var total = newOrder.meatFunction(inputtedMeats)+newOrder.veggieFunction(inputtedVeggies)+ newOrder.sizeFunction(inputtedSize);
+        if (inputtedSize===null){
+          alert("Hold on there, cowboy! You need to pick a size!")
+          window.location.reload();
+        }
 
         $("#total").show();
         $("#result").append("Your pizza is $" + total +
         "<br>Your "+ "<strong>" + inputtedSize + "</strong>" + " pizza will have: <br>" + inputtedVeggies.join(" ") + "<br>" + inputtedMeats.join(" "));
         $('#calculate').attr("disabled", true);
-
       });
 
       $("#submit").click(function(){
@@ -66,6 +70,7 @@ $(document).ready(function(){
       });
 
       $("#tryAgain").click(function(){
+        alert("See ya soon!")
         window.location.reload();
       });
-  });
+    });
